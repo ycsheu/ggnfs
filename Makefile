@@ -20,6 +20,7 @@ export CC CPP AR AS LOCALINC LOCALLIB
 
 choosetarget :
 	@echo "Possible targets are:"
+	@echo " nartive                  Native"
 	@echo "	pentium2              	 Intel Pentium 2"
 	@echo "	pentium3              	 Intel Pentium 3"
 	@echo "	pentium4              	 Intel Pentium 4"
@@ -35,6 +36,9 @@ choosetarget :
 	@echo "	snapshot       		 Sources snapshot"
 	@echo "	install			 Installation"
 	@echo "	clean         		 Clean up"
+
+native :
+	@ARCH="native" $(MAKE) common
 
 pentium2 :
 	@ARCH="pentium2" $(MAKE) x86common
